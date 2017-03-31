@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import Container from './Container.jsx'
-
+import Container from './Container.jsx';
+import Canvas from './canvas.jsx';
+import Tiles from './tiles.jsx';
 class App extends Component {
   constructor(){
     super();
@@ -20,6 +21,8 @@ class App extends Component {
      <div style={{textAlign: 'center'}}>
         <h1>Hello World</h1>
         <Container />
+        <Canvas />
+        <Tiles />
       </div>);
   }
 }
