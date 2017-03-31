@@ -1,9 +1,9 @@
-import React,{PropTypes} from 'react';
+import React,{Component} from 'react';
 
-class container extends Component{
-  constructor(props)
+class Container extends Component{
+  constructor(props){
   super(props)
-
+  }
   render(){
     return(
       <div>
@@ -13,4 +13,4 @@ class container extends Component{
   }
 }
 
-export default container;
+export default Container;

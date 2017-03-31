@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-// import container from './container'
+import Container from './Container.jsx'
 
 class App extends Component {
   constructor(){
@@ -9,8 +9,8 @@ class App extends Component {
       //need to grab the songs from JSON
 
     }
-    this.playlist = this.playlist.bind(this),
-    this.songs = this.songs.bind(this)
+    // this.playlist = this.playlist.bind(this),
+    // this.songs = this.songs.bind(this)
   }
 
   // playlist
@@ -19,7 +19,7 @@ class App extends Component {
     return (
      <div style={{textAlign: 'center'}}>
         <h1>Hello World</h1>
-        <container />
+        <Container />
       </div>);
   }
 }
