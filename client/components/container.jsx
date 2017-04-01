@@ -7,7 +7,7 @@ class Container extends Component{
   render(){
     return(
       <div>
-        <h2>WTF GUYS?!?</h2>
+        <h2>Rendering Container</h2>
       </div>
     )
   }
