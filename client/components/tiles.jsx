@@ -7,36 +7,40 @@ class Tiles extends Component {
     this.getYPos = this.getYPos.bind(this)
   }
 
-
-getXPos(tempo){
-  let grid = 1400 / 10; 
-  let xPos = grid  * tempo;
+getXPos(energy){
+  let grid = Math.round(1400 / 250); 
+  let xPos = grid  * energy;
   return xPos;
 }
 
-getYPos(energy){
-  let grid = 700 / 250;
-  let yPos = grid * energy;
+getYPos(tempo){
+  let grid = 700;
+  let yPos = grid * tempo;
   return yPos;
 }
 
-renderTiles(){
+createTiles(){
   for(let i = 0; i < this.props.playlist.length; i++){
     tile.push(this.props.playlist[i]);
   }
 }
 
-
-
-
-
   render() {
   let tile = [];
   for(let i = 0; i < this.props.playlist.length; i++){
-    let y = -1 *(this.getYPos(this.props.playlist[i][0]))
-    let x = -1 * (this.getXPos(this.props.playlist[i][1]))
+    let y = (this.getYPos(this.props.playlist[i][0])) 
+    let x = (this.getXPos(this.props.playlist[i][1])) 
     console.log(y,x)
-    tile.push(<div className="tiles" key = {i} style={{backgroundColor:'blue', width:'50px', height: '50px', borderRadius: '50%', position: 'relative', positionTop:{y}, positionLeft:{x}}}></div>)
+    let styles = {
+      top: y + "px", 
+      left: x + "px", 
+      backgroundColor:"blue", 
+      width: "50px", 
+      height: "50px", 
+      borderRadius: "50%", 
+      position: 'absolute'
+    }
+    tile.push(<div className="tiles" key = {i} style={styles}></div>)
   }
     return (
       <div>

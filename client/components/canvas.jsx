@@ -8,7 +8,7 @@ class Canvas extends Component {
 
   render() {
     return (
-      <div  id = 'canvas' style = {{height: '700px', width: '1400px', backgroundColor: 'pink'}}>
+      <div  id = 'canvas' style = {{height: '700px', width: '1400px', backgroundColor: 'pink', position:'relative'}}>
         <Tiles playlist = {this.props.playlist} />
       </div>
     )
