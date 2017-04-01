@@ -7,9 +7,8 @@ const spotify = require('./server/spotify');
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 
-app.get('/', spotify.fetchPlaylist, (req, res, next) => {
+app.get('/', spotify.fetchPlaylist, spotify.fetchSongData, (req, res, next) => {
   console.log("*rendering home page*");
-  console.log(res.locals.serverData);
   res.sendFile(path.join(__dirname, 'client/index.html'));
 });
 
