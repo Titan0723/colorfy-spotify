@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const SpotifyWebApi = require('spotify-web-api-node');
 
+
 const spotify = {};
 
 // setting up OAuth
@@ -12,7 +13,7 @@ var spotifyApi = new SpotifyWebApi({
 
 // get token from https://developer.spotify.com/web-api/console/get-playlist/
 // token expires every hour
-spotifyApi.setAccessToken('BQCpDptHjFAjLSJOmnr4oB1Uj-N_bDrAcUWgbcPWAEbVnRIO9lY7jVIu1hSEuVIaiSwOZWaxHZikEdsHdS4CBsNkDxOtBcNUJaEIErbO4NvkZ4uS9ROqqAHkclw66TVUFYAAUVXz_c5rxW1rBd0tLJxSovd6_Kv3p-hXmNu07dDS-17RocN9J5l5YmvUUb5k78GaUKPcwRqbyEMqBCo047Gg6BAVjZtlqu43AwqORTWnlu2GzoMYVhrDbb8asvyMaREGrR1Qhsmr671PqMuNAzShdRUDvbD7F-uGe1dGF6gsKvx251fB3w');
+spotifyApi.setAccessToken('BQCKdBAlPq6Cr-nncmHPRy0bnczaTbE-d-0OsA0gmn0rzIrgdH4aFvNdrPVkcjE6AwpGEcPoBRLAOnzFVCHT91Pf0_MUHEFwkVhlTnSsewv4mmCen6bwDOoJf7em5EKaGSGkH5lz41uhF6XzMJz5da8NMbfjus2fHxHaOsYAxj_NFB2Ki1dqRyyoIvIWeociY8LkmE3bRanaaXENjGp429G1LPqmi707Iwcc2toqBR35qiiji8fuUdpaNDCGipVG-pjqpqqc4MioOJK_V5JiW0o4Iv3rXSuR8IlfZe1kve-7PRV6sgcv3Q');
 
 spotify.fetchPlaylist = (req, res, next) => {
   // initialize collection to send to front-end
