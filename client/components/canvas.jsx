@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
+import Tiles from './tiles.jsx';
 
 class Canvas extends Component {
   constructor(props) {
     super(props)
   }
+
   render() {
     return (
-      <h3> Rendering Canvas </h3>
+      <div  id = 'canvas' style = {{height: '700px', width: '1400px', backgroundColor: 'pink'}}>
+        <Tiles playlist = {this.props.playlist} />
+      </div>
     )
   }
 }
